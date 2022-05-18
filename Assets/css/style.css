@@ -1,0 +1,112 @@
+body{
+    margin: 0;
+    background: white;
+    font-family: 'Inter', sans-serif;
+    font-size: 21px ;
+    color: black;
+
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+h1, h2, h3, h4, h5, h6{
+    margin: 0;
+}
+/* First container */
+.container{
+    width: 100%;
+    max-width:2000px;
+    margin: 0 auto;
+}
+/* Intro */
+
+.intro{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    background: url("../img/Background.png") center
+    no-repeat;
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+.intro_inner{
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+
+}
+.intro_title{
+    font-size: 75px;
+    font-weight: bold;
+    font-color: black;
+    text-align: center;
+
+}
+.intro_subtitle{
+    font-size: 24px;
+    font-color: black;
+    text-align: center;
+}
+/*Header*/
+
+.header{
+    padding-top: 25px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+.header_inner{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.Logo{
+    font-size: 45px;
+    font-weight: bold;
+    color: black;
+}
+.NavigationBar{
+    font-size: 21px;
+
+}
+.Nav_link{
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 40px;
+    color: black;
+    text-decoration: none;
+    position: relative;
+
+    transition: color .2s linear;
+}
+.Nav_link:after{
+    content: "";
+    display: block;
+    width: 100%;
+    height: 3px;
+
+    background-color: lightslategrey;
+    opacity: 0;
+
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1;
+
+    transition: opacity .3s linear ;
+
+}
+.Nav_link:hover{
+    color: lightslategrey;
+}
+.Nav_link:hover:after{
+    opacity: 1;
+}
